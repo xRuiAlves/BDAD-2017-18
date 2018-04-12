@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on quinta abr 12 09:35:53 2018
+-- File generated with SQLiteStudio v3.1.1 on quinta abr 12 10:13:36 2018
 --
 -- Text encoding used: UTF-8
 --
@@ -227,11 +227,16 @@ WITHOUT ROWID;
 DROP TABLE IF EXISTS WeekDay;
 
 CREATE TABLE WeekDay (
-    id        INT PRIMARY KEY
-                  NOT NULL ON CONFLICT ABORT,
-    dayNumber INT NOT NULL ON CONFLICT ABORT
-                  CHECK (dayNumber >= 0 AND 
-                         dayNumber <= 6) 
+    id      INT  PRIMARY KEY
+                 NOT NULL ON CONFLICT ABORT,
+    dayName TEXT NOT NULL ON CONFLICT ABORT
+                 CHECK (dayName == 'Monday' OR 
+                        dayName == 'Tuesday' OR 
+                        dayName == 'Wednesday' OR 
+                        dayName == 'Thursday' OR 
+                        dayName == 'Friday' OR 
+                        dayName == 'Saturday' OR 
+                        dayName == 'Sunday') 
 )
 WITHOUT ROWID;
 
