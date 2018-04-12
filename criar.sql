@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on quinta abr 12 21:03:45 2018
+-- File generated with SQLiteStudio v3.1.1 on quinta abr 12 23:19:43 2018
 --
 -- Text encoding used: UTF-8
 --
@@ -124,6 +124,7 @@ DROP TABLE IF EXISTS Exercise;
 CREATE TABLE Exercise (
     id          INT  PRIMARY KEY
                      NOT NULL ON CONFLICT ABORT,
+    name        TEXT NOT NULL ON CONFLICT ABORT,
     videoLink   TEXT DEFAULT NULL,
     description TEXT NOT NULL ON CONFLICT ABORT
                      DEFAULT ('No description available.'),
