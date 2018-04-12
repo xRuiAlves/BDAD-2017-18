@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on quinta abr 12 10:13:36 2018
+-- File generated with SQLiteStudio v3.1.1 on quinta abr 12 21:03:45 2018
 --
 -- Text encoding used: UTF-8
 --
@@ -165,10 +165,10 @@ WITHOUT ROWID;
 DROP TABLE IF EXISTS ExercisePlan;
 
 CREATE TABLE ExercisePlan (
-    id                 INT  PRIMARY KEY
-                            NOT NULL ON CONFLICT ABORT,
-    recomendedCooldown INT  CHECK (recomendedCooldown > 0),
-    difficulty         REAL NOT NULL ON CONFLICT ABORT
+    id                 INT PRIMARY KEY
+                           NOT NULL ON CONFLICT ABORT,
+    recomendedCooldown INT CHECK (recomendedCooldown > 0),
+    difficulty         INT NOT NULL ON CONFLICT ABORT
 )
 WITHOUT ROWID;
 
@@ -195,7 +195,7 @@ CREATE TABLE ParticipationDetails (
     challenge       INT    REFERENCES Challenge (id) ON DELETE SET NULL
                                                      ON UPDATE CASCADE
                            NOT NULL ON CONFLICT ABORT,
-    score           REAL   NOT NULL ON CONFLICT ABORT
+    score           INT    NOT NULL ON CONFLICT ABORT
                            CHECK (score >= 0) 
                            DEFAULT (0),
     finalPlanRating INT    DEFAULT NULL
@@ -217,7 +217,7 @@ CREATE TABLE User (
                             NOT NULL ON CONFLICT ABORT,
     nickname   TEXT (6, 48) UNIQUE
                             NOT NULL ON CONFLICT ABORT,
-    score      REAL         NOT NULL ON CONFLICT ABORT
+    score      INT          NOT NULL ON CONFLICT ABORT
                             DEFAULT (0) 
 )
 WITHOUT ROWID;
