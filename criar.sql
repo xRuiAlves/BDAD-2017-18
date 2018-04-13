@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on quinta abr 12 23:19:43 2018
+-- File generated with SQLiteStudio v3.1.1 on sexta abr 13 22:48:29 2018
 --
 -- Text encoding used: UTF-8
 --
@@ -10,13 +10,15 @@ BEGIN TRANSACTION;
 DROP TABLE IF EXISTS Challenge;
 
 CREATE TABLE Challenge (
-    id           INT  PRIMARY KEY
-                      NOT NULL ON CONFLICT ABORT,
-    startTime    DATE NOT NULL ON CONFLICT ABORT,
-    endTime      DATE NOT NULL ON CONFLICT ABORT,
-    exercisePlan INT  REFERENCES ExercisePlan (id) ON DELETE SET NULL
-                                                   ON UPDATE CASCADE
-                      NOT NULL ON CONFLICT ABORT,
+    id           INT     PRIMARY KEY
+                         NOT NULL ON CONFLICT ABORT,
+    startTime    DATE    NOT NULL ON CONFLICT ABORT,
+    endTime      DATE    NOT NULL ON CONFLICT ABORT,
+    exercisePlan INT     REFERENCES ExercisePlan (id) ON DELETE SET NULL
+                                                      ON UPDATE CASCADE
+                         NOT NULL ON CONFLICT ABORT,
+    isPublic     BOOLEAN NOT NULL ON CONFLICT ABORT
+                         DEFAULT (1),
     CHECK (endTime >= startTime) 
 )
 WITHOUT ROWID;
@@ -107,7 +109,7 @@ CREATE TABLE Execution (
                      NOT NULL ON CONFLICT ABORT,
     date      DATE   NOT NULL ON CONFLICT ABORT,
     duration  INT    NOT NULL ON CONFLICT ABORT
-                     CHECK (duration >= 0),
+                     CHECK (duration >= 1),
     user      BIGINT REFERENCES User (facebookID) ON DELETE SET NULL
                                                   ON UPDATE CASCADE
                      NOT NULL ON CONFLICT ABORT,
@@ -200,8 +202,8 @@ CREATE TABLE ParticipationDetails (
                            CHECK (score >= 0) 
                            DEFAULT (0),
     finalPlanRating INT    DEFAULT NULL
-                           CHECK (score > 0 AND 
-                                  score <= 10),
+                           CHECK (finalPlanRating >= 1 AND 
+                                  finalPlanRating <= 10),
     PRIMARY KEY (
         user,
         challenge
