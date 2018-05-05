@@ -11,6 +11,24 @@ INSERT INTO User VALUES (1000000000000002, 'helloWorld', 0);
 INSERT INTO User VALUES (1000000000000003, 'dataBasesAreCool', 0);
 INSERT INTO User VALUES (1000000000000004, 'SQLemPapel', 0);
 INSERT INTO User VALUES (1000000000000005, 'sim_nao_talvez', 0);
+INSERT INTO User VALUES (1000000000000006, 'random456', 0);
+INSERT INTO User VALUES (1000000000000007, 'batataFrita', 0);
+INSERT INTO User VALUES (1000000000000008, 'sedeDeConhecimento', 0);
+INSERT INTO User VALUES (1000000000000009, 'backEnd', 0);
+INSERT INTO User VALUES (1000000000000010, 'papaiaComAnanas', 0);
+INSERT INTO User VALUES (1000000000000011, 'RuiVieiraLDA', 0);
+INSERT INTO User VALUES (1000000000000012, 'SapateiroDaAvenida', 0);
+INSERT INTO User VALUES (1000000000000013, 'EspargoTuga', 0);
+INSERT INTO User VALUES (1000000000000014, 'sentimentoQuente', 0);
+INSERT INTO User VALUES (1000000000000015, 'anaMendes123', 0);
+INSERT INTO User VALUES (1000000000000016, 'bea17beatriz', 0);
+INSERT INTO User VALUES (1000000000000017, 'gajoForte', 0);
+INSERT INTO User VALUES (1000000000000018, 'lambdaFunction', 0);
+INSERT INTO User VALUES (1000000000000019, 'samuelMassas30', 0);
+INSERT INTO User VALUES (1000000000000020, 'rijoDeRioTinto', 0);
+INSERT INTO User VALUES (1000000000000021, 'guna_da_areosa', 0);
+INSERT INTO User VALUES (1000000000000022, 'passosLebre', 0);
+INSERT INTO User VALUES (4400230660011923, 'frangoNaBrasa', 0);
 
 -- Week Days
 INSERT INTO WeekDay VALUES (0, 'Sunday');
@@ -28,22 +46,74 @@ INSERT INTO ExerciseType VALUES (2, 'Balance');
 INSERT INTO ExerciseType VALUES (3, 'Flexibity');
 
 -- Exercises
-INSERT INTO Exercise VALUES (0, 'Push Ups', null, 'Push Ups are good for you', null, 2, 1);
-INSERT INTO Exercise VALUES (1, 'Pull Ups', null, 'Pull Ups are good for you', null, 4, 1);
-INSERT INTO Exercise VALUES (2, 'Crunches', null, 'Crunches are good for you', null, 2, 0);
-INSERT INTO Exercise VALUES (3, 'Jumps', null, 'Jumps are good for you', null, 1, 0);
-INSERT INTO Exercise VALUES (4, 'Jump Rope', null, 'Jump Rope is good for you', null, 2, 0);
-INSERT INTO Exercise VALUES (5, 'Touch Feet', null, 'Touching Feet is good for your flexibity', null, 3, 3);
+INSERT INTO Exercise VALUES (0, 'Crunches', null, 'Crunches are good for you', null, 2, 0);
+INSERT INTO Exercise VALUES (1, 'Jumps', null, 'Jumps are good for you', null, 1, 0);
+INSERT INTO Exercise VALUES (2, 'Jump Rope', null, 'Jump Rope is good for you', null, 2, 0);
+INSERT INTO Exercise VALUES (3, 'Jogging', null, 'Jogging is good for you', null, 3, 0);
+INSERT INTO Exercise VALUES (4, 'Mountain Climbers', null, 'Mountain Climbers are good for you', null, 4, 0);
+INSERT INTO Exercise VALUES (5, 'High Knees', null, 'High Knees are good for you', null, 2, 0);
+INSERT INTO Exercise VALUES (6, 'Skaters', null, 'Skaters are good for you', null, 3, 0);
+INSERT INTO Exercise VALUES (7, 'Wide Mountain Climbers', null, 'Wide Mountain Climbers are good for you', null, 5, 0);
+INSERT INTO Exercise VALUES (8, 'Lunges', null, 'Lunges are good for you', null, 2, 0);
+INSERT INTO Exercise VALUES (9, 'Jumping Lunges', null, 'Jumping Lunges are good for you', null, 3, 0);
+INSERT INTO Exercise VALUES (10, 'Push Ups', null, 'Push Ups are good for you', null, 2, 1);
+INSERT INTO Exercise VALUES (11, 'Pull Ups', null, 'Pull Ups are good for you', null, 4, 1);
+INSERT INTO Exercise VALUES (12, 'Hammer Curls', null, 'Hammer Curls are good for you', null, 3, 1);
+INSERT INTO Exercise VALUES (13, 'Spider Curl', null, 'Spider Curl is good for you', null, 2, 1);
+INSERT INTO Exercise VALUES (14, 'Machine Bicep Curl', null, 'Machine Bicep Curl is good for you', null, 2, 1);
+INSERT INTO Exercise VALUES (15, 'Zottman Curl', null, 'Zottman Curl is good for you', null, 3, 1);
+INSERT INTO Exercise VALUES (16, 'Close-Grip Barbell Bench Press', null, 'Close-Grip Barbell Bench Press is good for you', null, 4, 1);
+INSERT INTO Exercise VALUES (17, 'Seated Dumbbell Press', null, 'Seated Dumbbell Presses are good for you', null, 2, 1);
+INSERT INTO Exercise VALUES (18, 'Tricep Dumbbell Kickback', null, 'Tricep Dumbbell Kickbacks are good for you', null, 5, 1);
+INSERT INTO Exercise VALUES (19, 'Mountain Pose', null, 'Easy Yoga Exercise. Do it for 1 whole minute for best results.', null, 1, 2);
+INSERT INTO Exercise VALUES (20, 'Warrior Pose', null, 'Easy Yoga Exercise. Do it for 2 whole minutes for best results.', null, 1, 2);
+INSERT INTO Exercise VALUES (21, 'Bridge Pose', null, 'Medium Yoga Exercise. Do it for 2 whole minutes for best results.', null, 2, 2);
+INSERT INTO Exercise VALUES (22, 'Pigeon Pose', null, 'Medium Yoga Exercise. Do it for 2 whole minutes for best results.', null, 3, 2);
+INSERT INTO Exercise VALUES (23, 'Wounded Peacock', null, 'Hard Yoga Exercise. Do it for 1 whole minute for best results.', null, 5, 2);
+INSERT INTO Exercise VALUES (24, 'Touch Feet', null, 'Touching Feet is good for your flexibity', null, 3, 3);
+INSERT INTO Exercise VALUES (25, 'Lunge With Spinal Twist', null, 'Lunge With Spinal Twist is good for your flexibity', null, 2, 3);
+INSERT INTO Exercise VALUES (26, 'Figure Four Stretch', null, 'Figure Four Stretch is good for your flexibity', null, 2, 3);
+INSERT INTO Exercise VALUES (27, 'Butterfly Stretch', null, 'Butterfly Stretch is good for your flexibity', null, 1, 3);
+INSERT INTO Exercise VALUES (28, 'Lunging Hip Flexor Stretch', null, 'Lunging Hip Flexor Stretch is good for your flexibity', null, 3, 3);
+INSERT INTO Exercise VALUES (29, 'Standing Quad Stretch', null, 'Standing Quad Stretch is good for your flexibity', null, 2, 3);
+INSERT INTO Exercise VALUES (30, 'Triceps Stretch', null, 'Triceps Stretch is good for your flexibity', null, 2, 3);
+INSERT INTO Exercise VALUES (31, 'Standing Quad Stretch', null, 'Standing Quad Stretch is good for your flexibity', null, 5, 3);
 
 -- Default Exercises
 INSERT INTO DefaultExercise VALUES (0);
 INSERT INTO DefaultExercise VALUES (1);
 INSERT INTO DefaultExercise VALUES (2);
 INSERT INTO DefaultExercise VALUES (3);
-INSERT INTO DefaultExercise VALUES (4);
+INSERT INTO DefaultExercise VALUES (10);
+INSERT INTO DefaultExercise VALUES (11);
+INSERT INTO DefaultExercise VALUES (12);
+INSERT INTO DefaultExercise VALUES (13);
+INSERT INTO DefaultExercise VALUES (14);
+INSERT INTO DefaultExercise VALUES (15);
+INSERT INTO DefaultExercise VALUES (16);
+INSERT INTO DefaultExercise VALUES (17);
+INSERT INTO DefaultExercise VALUES (18);
+INSERT INTO DefaultExercise VALUES (19);
+INSERT INTO DefaultExercise VALUES (20);
+INSERT INTO DefaultExercise VALUES (21);
+INSERT INTO DefaultExercise VALUES (22);
+INSERT INTO DefaultExercise VALUES (28);
+INSERT INTO DefaultExercise VALUES (29);
+INSERT INTO DefaultExercise VALUES (30);
+INSERT INTO DefaultExercise VALUES (31);
 
 -- Custom Exercises
-INSERT INTO CustomExercise VALUES (5, 1, 1172259692795609);
+INSERT INTO CustomExercise VALUES (4, 1, 1172259692795609);
+INSERT INTO CustomExercise VALUES (5, 1, 1213126072166765);
+INSERT INTO CustomExercise VALUES (6, 1, 1399959692665501);
+INSERT INTO CustomExercise VALUES (7, 1, 1000000000000002);
+INSERT INTO CustomExercise VALUES (8, 1, 4400230660011923);
+INSERT INTO CustomExercise VALUES (9, 1, 1172259692795609);
+INSERT INTO CustomExercise VALUES (23, 1, 1000000000000012);
+INSERT INTO CustomExercise VALUES (24, 1, 4400230660011923);
+INSERT INTO CustomExercise VALUES (25, 1, 1000000000000016);
+INSERT INTO CustomExercise VALUES (26, 1, 1000000000000016);
+INSERT INTO CustomExercise VALUES (27, 1, 1000000000000002);
 
 -- Exercise Plans
 INSERT INTO ExercisePlan VALUES(0, 2, 2);
