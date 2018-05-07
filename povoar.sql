@@ -46,16 +46,16 @@ INSERT INTO ExerciseType VALUES (2, 'Balance');
 INSERT INTO ExerciseType VALUES (3, 'Flexibity');
 
 -- Exercises
-INSERT INTO Exercise VALUES (0, 'Crunches', null, 'Crunches are good for you', null, 2, 1);
-INSERT INTO Exercise VALUES (1, 'Jumps', null, 'Jumps are good for you', null, 1, 1);
+INSERT INTO Exercise VALUES (0, 'Crunches', null, 'Crunches are good for you', null, 2, 0);
+INSERT INTO Exercise VALUES (1, 'Jumps', null, 'Jumps are good for you', null, 1, 0);
 INSERT INTO Exercise VALUES (2, 'Jump Rope', null, 'Jump Rope is good for you', null, 2, 0);
 INSERT INTO Exercise VALUES (3, 'Jogging', null, 'Jogging is good for you', null, 3, 0);
 INSERT INTO Exercise VALUES (4, 'Mountain Climbers', null, 'Mountain Climbers are good for you', null, 4, 0);
 INSERT INTO Exercise VALUES (5, 'High Knees', null, 'High Knees are good for you', null, 2, 0);
 INSERT INTO Exercise VALUES (6, 'Skaters', null, 'Skaters are good for you', null, 3, 0);
 INSERT INTO Exercise VALUES (7, 'Wide Mountain Climbers', null, 'Wide Mountain Climbers are good for you', null, 5, 0);
-INSERT INTO Exercise VALUES (8, 'Lunges', null, 'Lunges are good for you', null, 2, 3);
-INSERT INTO Exercise VALUES (9, 'Jumping Lunges', null, 'Jumping Lunges are good for you', null, 3, 3);
+INSERT INTO Exercise VALUES (8, 'Lunges', null, 'Lunges are good for you', null, 2, 0);
+INSERT INTO Exercise VALUES (9, 'Jumping Lunges', null, 'Jumping Lunges are good for you', null, 3, 0);
 INSERT INTO Exercise VALUES (10, 'Push Ups', null, 'Push Ups are good for you', null, 2, 1);
 INSERT INTO Exercise VALUES (11, 'Pull Ups', null, 'Pull Ups are good for you', null, 4, 1);
 INSERT INTO Exercise VALUES (12, 'Hammer Curls', null, 'Hammer Curls are good for you', null, 3, 1);
@@ -66,9 +66,9 @@ INSERT INTO Exercise VALUES (16, 'Close-Grip Barbell Bench Press', null, 'Close-
 INSERT INTO Exercise VALUES (17, 'Seated Dumbbell Press', null, 'Seated Dumbbell Presses are good for you', null, 2, 1);
 INSERT INTO Exercise VALUES (18, 'Tricep Dumbbell Kickback', null, 'Tricep Dumbbell Kickbacks are good for you', null, 5, 1);
 INSERT INTO Exercise VALUES (19, 'Mountain Pose', null, 'Easy Yoga Exercise. Do it for 1 whole minute for best results.', null, 1, 2);
-INSERT INTO Exercise VALUES (20, 'Warrior Pose', null, 'Easy Yoga Exercise. Do it for 2 whole minutes for best results.', null, 1, 3);
-INSERT INTO Exercise VALUES (21, 'Bridge Pose', null, 'Medium Yoga Exercise. Do it for 2 whole minutes for best results.', null, 2, 3);
-INSERT INTO Exercise VALUES (22, 'Pigeon Pose', null, 'Medium Yoga Exercise. Do it for 2 whole minutes for best results.', null, 3, 3);
+INSERT INTO Exercise VALUES (20, 'Warrior Pose', null, 'Easy Yoga Exercise. Do it for 2 whole minutes for best results.', null, 1, 2);
+INSERT INTO Exercise VALUES (21, 'Bridge Pose', null, 'Medium Yoga Exercise. Do it for 2 whole minutes for best results.', null, 2, 2);
+INSERT INTO Exercise VALUES (22, 'Pigeon Pose', null, 'Medium Yoga Exercise. Do it for 2 whole minutes for best results.', null, 3, 2);
 INSERT INTO Exercise VALUES (23, 'Wounded Peacock', null, 'Hard Yoga Exercise. Do it for 1 whole minute for best results.', null, 5, 2);
 INSERT INTO Exercise VALUES (24, 'Touch Feet', null, 'Touching Feet is good for your flexibity', null, 3, 3);
 INSERT INTO Exercise VALUES (25, 'Lunge With Spinal Twist', null, 'Lunge With Spinal Twist is good for your flexibity', null, 2, 3);
@@ -78,6 +78,12 @@ INSERT INTO Exercise VALUES (28, 'Lunging Hip Flexor Stretch', null, 'Lunging Hi
 INSERT INTO Exercise VALUES (29, 'Standing Quad Stretch', null, 'Standing Quad Stretch is good for your flexibity', null, 2, 3);
 INSERT INTO Exercise VALUES (30, 'Triceps Stretch', null, 'Triceps Stretch is good for your flexibity', null, 2, 3);
 INSERT INTO Exercise VALUES (31, 'Standing Quad Stretch', null, 'Standing Quad Stretch is good for your flexibity', null, 5, 3);
+INSERT INTO Exercise VALUES (32, 'High Skipping', null, 'High Skipping is good for you', null, 5, 3);
+INSERT INTO Exercise VALUES (33, 'Medium Skipping', null, 'Medium Skipping is good for you', null, 5, 3);
+INSERT INTO Exercise VALUES (34, 'Low Skipping', null, 'Low Skipping is good for you', null, 5, 3);
+INSERT INTO Exercise VALUES (35, 'Ball Jumps', null, 'Jumping with a ball is good for you', null, 5, 3);
+INSERT INTO Exercise VALUES (36, 'Knee Side Stretch', null, 'Knee Side Stretches are good for you', null, 5, 3);
+INSERT INTO Exercise VALUES (37, 'Knee Front Stretch', null, 'Knee Side Stretches are good for you', null, 5, 3);
 
 -- Default Exercises
 INSERT INTO DefaultExercise VALUES (0);
@@ -101,6 +107,8 @@ INSERT INTO DefaultExercise VALUES (28);
 INSERT INTO DefaultExercise VALUES (29);
 INSERT INTO DefaultExercise VALUES (30);
 INSERT INTO DefaultExercise VALUES (31);
+INSERT INTO DefaultExercise VALUES (32);
+INSERT INTO DefaultExercise VALUES (33);
 
 -- Custom Exercises
 INSERT INTO CustomExercise VALUES (4, 1, 1172259692795609);
@@ -114,6 +122,10 @@ INSERT INTO CustomExercise VALUES (24, 1, 4400230660011923);
 INSERT INTO CustomExercise VALUES (25, 1, 1000000000000016);
 INSERT INTO CustomExercise VALUES (26, 1, 1000000000000016);
 INSERT INTO CustomExercise VALUES (27, 1, 1000000000000002);
+INSERT INTO CustomExercise VALUES (34, 1, 1000000000000003);
+INSERT INTO CustomExercise VALUES (35, 1, 1000000000000003);
+INSERT INTO CustomExercise VALUES (36, 1, 1000000000000003);
+INSERT INTO CustomExercise VALUES (37, 1, 1000000000000003);
 
 -- Exercise Plans
 INSERT INTO ExercisePlan VALUES(0, 2, 2);
@@ -124,6 +136,8 @@ INSERT INTO ExercisePlan VALUES(4, 2, 4);
 INSERT INTO ExercisePlan VALUES(5, 2, 3);
 INSERT INTO ExercisePlan VALUES(6, 3, 3);
 INSERT INTO ExercisePlan VALUES(7, 5, 3);
+INSERT INTO ExercisePlan VALUES(8, 2, 2);
+INSERT INTO ExercisePlan VALUES(9, 3, 3);
 
 -- Default Exercise Plans
 INSERT INTO DefaultPlan VALUES(0);
@@ -131,10 +145,13 @@ INSERT INTO DefaultPlan VALUES(2);
 INSERT INTO DefaultPlan VALUES(4);
 INSERT INTO DefaultPlan VALUES(5);
 INSERT INTO DefaultPlan VALUES(6);
+INSERT INTO DefaultPlan VALUES(7);
 
 -- Custom Exercise Plans
 INSERT INTO CustomPlan VALUES(1, '2018-01-01', 0, 1000000000000001);
 INSERT INTO CustomPlan VALUES(3, null, 1, 1399959692665501);
+INSERT INTO CustomPlan VALUES(8, null, 1, 1000000000000003);
+INSERT INTO CustomPlan VALUES(9, null, 1, 1000000000000003);
 
 -- Exercise Parameters
 INSERT INTO ExerciseParameters VALUES(2, 3, 5, 2);
@@ -182,17 +199,29 @@ INSERT INTO ExerciseParameters VALUES(7, 28, 1, 1);
 INSERT INTO ExerciseParameters VALUES(7, 29, 1, 1);
 INSERT INTO ExerciseParameters VALUES(7, 30, 1, 3);
 INSERT INTO ExerciseParameters VALUES(7, 31, 1, 4);
+INSERT INTO ExerciseParameters VALUES(8, 32, 18, 2);
+INSERT INTO ExerciseParameters VALUES(8, 33, 15, 3);
+INSERT INTO ExerciseParameters VALUES(8, 34, 30, 1);
+INSERT INTO ExerciseParameters VALUES(8, 35, 10, 5);
+INSERT INTO ExerciseParameters VALUES(9, 32, 15, 3);
+INSERT INTO ExerciseParameters VALUES(9, 33, 15, 3);
+INSERT INTO ExerciseParameters VALUES(9, 34, 15, 3);
+INSERT INTO ExerciseParameters VALUES(9, 35, 10, 4);
+INSERT INTO ExerciseParameters VALUES(9, 36, 20, 2);
+INSERT INTO ExerciseParameters VALUES(9, 37, 18, 2);
 
 -- Challenges
 INSERT INTO Challenge VALUES(0, '2018-01-10', '2018-03-10', 0, 0);
 INSERT INTO Challenge VALUES(1, '2017-12-10', '2018-02-15', 3, 1);
 INSERT INTO Challenge VALUES(2, '2017-12-15', '2018-02-20', 2, 1);
 INSERT INTO Challenge VALUES(3, '2018-01-10', '2025-09-09', 2, 1);
-INSERT INTO Challenge VALUES(4, '2019-05-10', '2019-05-30', 3, 1);
-INSERT INTO Challenge VALUES(5, '2018-10-05', '2018-12-05', 1, 1);
-INSERT INTO Challenge VALUES(6, '2018-05-11', '2018-07-11', 1, 1);
+INSERT INTO Challenge VALUES(4, '2019-05-10', '2019-05-30', 4, 1);
+INSERT INTO Challenge VALUES(5, '2018-10-05', '2018-12-05', 5, 1);
+INSERT INTO Challenge VALUES(6, '2018-05-11', '2018-07-11', 6, 1);
 INSERT INTO Challenge VALUES(7, '2018-01-10', '2018-04-02', 1, 1);
-INSERT INTO Challenge VALUES(8, '2018-01-01', '2020-01-01', 0, 1);
+INSERT INTO Challenge VALUES(8, '2018-01-01', '2020-01-01', 7, 1);
+INSERT INTO Challenge VALUES(9, '2018-01-01', '2021-01-01', 9, 1);
+INSERT INTO Challenge VALUES(10, '2018-01-01', '2022-01-01', 9, 1);
 
 -- Challenge Days
 INSERT INTO ChallengeDay VALUES(0, 2);
@@ -217,6 +246,8 @@ INSERT INTO ChallengeDay VALUES(7, 1);
 INSERT INTO ChallengeDay VALUES(7, 3);
 INSERT INTO ChallengeDay VALUES(7, 5);
 INSERT INTO ChallengeDay VALUES(8, 0);
+INSERT INTO ChallengeDay VALUES(9, 0);
+INSERT INTO ChallengeDay VALUES(10, 0);
 
 -- Participation Details
 INSERT INTO ParticipationDetails VALUES(2391887954170140, 1, 12, 8);
@@ -252,7 +283,11 @@ INSERT INTO ParticipationDetails VALUES(1399959692665501, 8, 7, 1);
 INSERT INTO ParticipationDetails VALUES(2034390363479219, 8, 8, 3);
 INSERT INTO ParticipationDetails VALUES(1000000000000008, 8, 9, 8);
 INSERT INTO ParticipationDetails VALUES(1000000000000009, 8, 10, 1);
-INSERT INTO ParticipationDetails VALUES(1000000000000010, 8, 11, 3);
+INSERT INTO ParticipationDetails VALUES(1000000000000010, 8, 12, 3);
+INSERT INTO ParticipationDetails VALUES(1000000000000011, 9, 13, 6);
+INSERT INTO ParticipationDetails VALUES(1000000000000012, 9, 14, 6);
+INSERT INTO ParticipationDetails VALUES(1000000000000011, 10, 15, 8);
+INSERT INTO ParticipationDetails VALUES(1000000000000012, 10, 16, 6);
 
 -- Executions
 INSERT INTO Execution VALUES(0, '2017-12-12', 3, 1213126072166765, 1);
@@ -284,3 +319,7 @@ INSERT INTO Execution VALUES(25, '2018-01-10', 9, 1000000000000001, 8);
 INSERT INTO Execution VALUES(26, '2018-01-15', 8, 1000000000000001, 8);
 INSERT INTO Execution VALUES(27, '2018-01-03', 15, 1000000000000003, 8);
 INSERT INTO Execution VALUES(28, '2018-01-03', 13, 1000000000000004, 8);
+INSERT INTO Execution VALUES(29, '2019-04-10', 20, 1000000000000011, 9);
+INSERT INTO Execution VALUES(30, '2019-04-17', 18, 1000000000000012, 9);
+INSERT INTO Execution VALUES(31, '2020-10-01', 21, 1000000000000011, 10);
+INSERT INTO Execution VALUES(32, '2020-09-01', 22, 1000000000000012, 10);
