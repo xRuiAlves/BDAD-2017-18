@@ -15,8 +15,7 @@ CREATE TABLE Challenge (
     isPublic     BOOLEAN NOT NULL ON CONFLICT ABORT
                          DEFAULT (1),
     CHECK (endTime >= startTime)
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: ChallengeDay
@@ -33,8 +32,7 @@ CREATE TABLE ChallengeDay (
         challengeID,
         weekDayID
     )
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: CustomExercise
@@ -50,8 +48,7 @@ CREATE TABLE CustomExercise (
     creator  BIGINT  REFERENCES User (userID) ON DELETE SET NULL
                                                   ON UPDATE CASCADE
                      NOT NULL ON CONFLICT ABORT
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: CustomPlan
@@ -68,8 +65,7 @@ CREATE TABLE CustomPlan (
     creator      BIGINT  REFERENCES User (userID) ON DELETE SET NULL
                                                       ON UPDATE CASCADE
                          NOT NULL ON CONFLICT ABORT
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: DefaultExercise
@@ -80,8 +76,7 @@ CREATE TABLE DefaultExercise (
          REFERENCES Exercise (exerciseID) ON DELETE SET NULL
                                   ON UPDATE CASCADE
          NOT NULL ON CONFLICT ABORT
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: DefaultPlan
@@ -92,8 +87,7 @@ CREATE TABLE DefaultPlan (
          REFERENCES ExercisePlan (exercisePlanID) ON DELETE SET NULL
                                       ON UPDATE CASCADE
          NOT NULL ON CONFLICT ABORT
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: Execution
@@ -111,8 +105,7 @@ CREATE TABLE Execution (
     challenge INT    REFERENCES Challenge (challengeID) ON DELETE SET NULL
                                                ON UPDATE CASCADE
                      NOT NULL ON CONFLICT ABORT
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: Exercise
@@ -133,8 +126,7 @@ CREATE TABLE Exercise (
     exerciseTypeID   INT  REFERENCES ExerciseType (exerciseTypeID) ON DELETE SET NULL
                                                   ON UPDATE CASCADE
                      NOT NULL ON CONFLICT ABORT
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: ExerciseParameters
@@ -155,8 +147,7 @@ CREATE TABLE ExerciseParameters (
         exercisePlanID,
         exerciseID
     )
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: ExercisePlan
@@ -167,8 +158,7 @@ CREATE TABLE ExercisePlan (
                            NOT NULL ON CONFLICT ABORT,
     recomendedCooldown INT CHECK (recomendedCooldown > 0),
     difficulty         INT NOT NULL ON CONFLICT ABORT
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: ExerciseType
@@ -179,8 +169,7 @@ CREATE TABLE ExerciseType (
               PRIMARY KEY,
     name TEXT UNIQUE
               NOT NULL ON CONFLICT ABORT
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: ParticipationDetails
@@ -203,8 +192,7 @@ CREATE TABLE ParticipationDetails (
         userID,
         challengeID
     )
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: User
@@ -213,12 +201,10 @@ DROP TABLE IF EXISTS User;
 CREATE TABLE User (
     userID     BIGINT       PRIMARY KEY ON CONFLICT ABORT
                             NOT NULL ON CONFLICT ABORT,
-    nickname   TEXT (6, 48) UNIQUE
-                            NOT NULL ON CONFLICT ABORT,
-    userScore      INT          NOT NULL ON CONFLICT ABORT
+    nickname   TEXT (6, 48) NOT NULL ON CONFLICT ABORT,
+    userScore      INT      NOT NULL ON CONFLICT ABORT
                             DEFAULT (0)
-)
-WITHOUT ROWID;
+);
 
 
 -- Table: WeekDay
@@ -235,8 +221,7 @@ CREATE TABLE WeekDay (
                         dayName == 'Friday' OR
                         dayName == 'Saturday' OR
                         dayName == 'Sunday')
-)
-WITHOUT ROWID;
+);
 
 
 COMMIT TRANSACTION;
