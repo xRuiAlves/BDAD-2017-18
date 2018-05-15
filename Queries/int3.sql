@@ -2,3 +2,4 @@
 .headers    on
 .nullvalue  NULL
 
+SELECT name FROM ExerciseType;

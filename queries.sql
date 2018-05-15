@@ -43,3 +43,8 @@ SELECT challengeID, avg(finalPlanRating) as Rating, count(*) as nVotes
 FROM Challenge NATURAL JOIN ParticipationDetails
 GROUP BY challengeID
 ORDER BY Rating DESC, nVotes DESC;
+
+-- QUERY 9
+SELECT exercisePlanID, count(*) as nCustoms
+FROM (SELECT creator, exercisePlanID as planCreator FROM CustomPlan) NATURAL JOIN ExerciseParameters NATURAL JOIN CustomExercise
+--WHERE planCreator = '1000000000000001';
