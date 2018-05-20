@@ -128,16 +128,16 @@ INSERT INTO CustomExercise VALUES (36, 1, 1000000000000003);
 INSERT INTO CustomExercise VALUES (37, 1, 1000000000000003);
 
 -- Exercise Plans
-INSERT INTO ExercisePlan VALUES(0, 2, 2);
-INSERT INTO ExercisePlan VALUES(1, 3, 3);
-INSERT INTO ExercisePlan VALUES(2, 1, 1);
-INSERT INTO ExercisePlan VALUES(3, 2, 2);
-INSERT INTO ExercisePlan VALUES(4, 2, 4);
-INSERT INTO ExercisePlan VALUES(5, 2, 3);
-INSERT INTO ExercisePlan VALUES(6, 3, 3);
-INSERT INTO ExercisePlan VALUES(7, 5, 3);
-INSERT INTO ExercisePlan VALUES(8, 2, 2);
-INSERT INTO ExercisePlan VALUES(9, 3, 3);
+INSERT INTO ExercisePlan VALUES(0, 2, 0);
+INSERT INTO ExercisePlan VALUES(1, 3, 0);
+INSERT INTO ExercisePlan VALUES(2, 1, 0);
+INSERT INTO ExercisePlan VALUES(3, 2, 0);
+INSERT INTO ExercisePlan VALUES(4, 2, 0);
+INSERT INTO ExercisePlan VALUES(5, 2, 0);
+INSERT INTO ExercisePlan VALUES(6, 3, 0);
+INSERT INTO ExercisePlan VALUES(7, 5, 0);
+INSERT INTO ExercisePlan VALUES(8, 2, 0);
+INSERT INTO ExercisePlan VALUES(9, 3, 0);
 
 -- Default Exercise Plans
 INSERT INTO DefaultPlan VALUES(0);
