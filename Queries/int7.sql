@@ -2,7 +2,6 @@
 .headers    on
 .nullvalue  NULL
 
-SELECT challengeID, avg(finalPlanRating) as Rating, count(*) as nVotes
-FROM Challenge NATURAL JOIN ParticipationDetails
-GROUP BY challengeID
-ORDER BY Rating DESC, nVotes DESC;
+SELECT challengeID, nickname, max(participationScore)
+FROM User NATURAL JOIN ParticipationDetails
+GROUP BY challengeID;
