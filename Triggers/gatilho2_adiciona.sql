@@ -5,10 +5,8 @@ BEGIN
     UPDATE ParticipationDetails
     SET participationScore = participationScore
                             + (SELECT count(*) FROM ExerciseParameters
-                            WHERE exercisePlanID = (SELECT participationScore FROM ParticipationDetails WHERE challengeID = NEW.challengeID AND userID = NEW.userID))
+                            WHERE exercisePlanID = (SELECT exercisePlanID FROM Challenge WHERE challengeID = NEW.challengeID))
                             * (SELECT difficulty FROM ExercisePlan
-                              WHERE exercisePlanID = (SELECT participationScore FROM ParticipationDetails WHERE challengeID = NEW.challengeID AND userID = NEW.userID))
-    WHERE User.userID = NEW.userID;
-
-    DROP VIEW IF EXISTS getPlanID;
+                              WHERE exercisePlanID = (SELECT exercisePlanID FROM Challenge WHERE challengeID = NEW.challengeID))
+    WHERE ParticipationDetails.userID = NEW.userID;
 END;

@@ -5,8 +5,7 @@ BEGIN TRANSACTION;
 DROP TABLE IF EXISTS Challenge;
 
 CREATE TABLE Challenge (
-    challengeID           INT     PRIMARY KEY
-                         NOT NULL ON CONFLICT ABORT,
+    challengeID           INT     PRIMARY KEY,
     startTime    DATE    NOT NULL ON CONFLICT ABORT,
     endTime      DATE    NOT NULL ON CONFLICT ABORT,
     exercisePlanID INT     REFERENCES ExercisePlan (exercisePlanID) ON DELETE SET NULL
@@ -94,8 +93,7 @@ CREATE TABLE DefaultPlan (
 DROP TABLE IF EXISTS Execution;
 
 CREATE TABLE Execution (
-    executionID        INT    PRIMARY KEY
-                     NOT NULL ON CONFLICT ABORT,
+    executionID        INT    PRIMARY KEY,
     date      DATE   NOT NULL ON CONFLICT ABORT,
     duration  INT    NOT NULL ON CONFLICT ABORT
                      CHECK (duration >= 1),
@@ -112,8 +110,7 @@ CREATE TABLE Execution (
 DROP TABLE IF EXISTS Exercise;
 
 CREATE TABLE Exercise (
-    exerciseID  INT  PRIMARY KEY
-                     NOT NULL ON CONFLICT ABORT,
+    exerciseID  INT  PRIMARY KEY,
     name        TEXT NOT NULL ON CONFLICT ABORT,
     videoLink   TEXT DEFAULT NULL,
     description TEXT NOT NULL ON CONFLICT ABORT
@@ -154,8 +151,7 @@ CREATE TABLE ExerciseParameters (
 DROP TABLE IF EXISTS ExercisePlan;
 
 CREATE TABLE ExercisePlan (
-    exercisePlanID     INT PRIMARY KEY
-                           NOT NULL ON CONFLICT ABORT,
+    exercisePlanID     INT PRIMARY KEY,
     recomendedCooldown INT CHECK (recomendedCooldown > 0),
     difficulty         INT NOT NULL ON CONFLICT ABORT
 );
@@ -165,8 +161,7 @@ CREATE TABLE ExercisePlan (
 DROP TABLE IF EXISTS ExerciseType;
 
 CREATE TABLE ExerciseType (
-    exerciseTypeID   INT  NOT NULL ON CONFLICT ABORT
-              PRIMARY KEY,
+    exerciseTypeID   INT    PRIMARY KEY,
     name TEXT UNIQUE
               NOT NULL ON CONFLICT ABORT
 );
@@ -199,8 +194,7 @@ CREATE TABLE ParticipationDetails (
 DROP TABLE IF EXISTS User;
 
 CREATE TABLE User (
-    userID     BIGINT       PRIMARY KEY ON CONFLICT ABORT
-                            NOT NULL ON CONFLICT ABORT,
+    userID     BIGINT       PRIMARY KEY,
     nickname   TEXT (6, 48) NOT NULL ON CONFLICT ABORT,
     userScore      INT      NOT NULL ON CONFLICT ABORT
                             DEFAULT (0)
@@ -211,8 +205,7 @@ CREATE TABLE User (
 DROP TABLE IF EXISTS WeekDay;
 
 CREATE TABLE WeekDay (
-    weekDayID    INT  PRIMARY KEY
-                 NOT NULL ON CONFLICT ABORT,
+    weekDayID    INT  PRIMARY KEY,
     dayName TEXT NOT NULL ON CONFLICT ABORT
                  CHECK (dayName == 'Monday' OR
                         dayName == 'Tuesday' OR
