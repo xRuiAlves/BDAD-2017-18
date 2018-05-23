@@ -102,7 +102,7 @@ CREATE TABLE Execution (
     userID  BIGINT REFERENCES User (userID) ON DELETE SET NULL
                                                   ON UPDATE CASCADE
                      NOT NULL ON CONFLICT ABORT,
-    challenge INT    REFERENCES Challenge (challengeID) ON DELETE SET NULL
+    challengeID INT    REFERENCES Challenge (challengeID) ON DELETE SET NULL
                                                ON UPDATE CASCADE
                      NOT NULL ON CONFLICT ABORT
 );
