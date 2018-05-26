@@ -4,4 +4,4 @@
 
 SELECT DISTINCT exercisePlanID
 FROM ExerciseParameters NATURAL JOIN Exercise
-WHERE name LIKE '%Jump%'
+WHERE name LIKE '%Jump%';

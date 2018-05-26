@@ -32,3 +32,5 @@ SELECT exerciseID, exerciseTypeID, 0, exerciseTypeID FROM
 (Exercise NATURAL JOIN [getExerciseTypeFrequency])
 
 ORDER BY ExerciseFrequency DESC, ExerciseTypeFrequency DESC;
+
+DROP VIEW IF EXISTS [getExerciseTypeFrequency];

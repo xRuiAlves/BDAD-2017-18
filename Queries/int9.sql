@@ -22,4 +22,5 @@ FROM
       NATURAL JOIN ExerciseParameters
       GROUP BY exercisePlanID)
 
-  USING(exercisePlanID);
+  USING(exercisePlanID)
+  ORDER BY CustomizationPercentage DESC;
