@@ -2,12 +2,24 @@
 .headers    on
 .nullvalue  NULL
 
-SELECT planCreator, (nCustoms*100)/nExercises
+SELECT exercisePlanID, (nCustoms*100)/nExercises as CustomizationPercentage
 FROM
-  (SELECT planCreator, count(*) as nCustoms
-    FROM (SELECT creator as planCreator, exercisePlanID FROM CustomPlan) NATURAL JOIN ExerciseParameters NATURAL JOIN CustomExercise
-    GROUP BY planCreator)
-  NATURAL JOIN
-  (SELECT planCreator, count(*) as nExercises
-    FROM (SELECT creator as planCreator, exercisePlanID FROM CustomPlan) NATURAL JOIN ExerciseParameters
-    WHERE planCreator = '1399959692665501');
+
+  (SELECT exercisePlanID, count(*) as nCustoms
+  FROM
+      (SELECT exercisePlanID
+        FROM CustomPlan WHERE creator = '1000000000000003')
+      NATURAL JOIN ExerciseParameters
+      NATURAL JOIN CustomExercise
+      GROUP BY exercisePlanID)
+
+  JOIN
+
+  (SELECT exercisePlanID, count(*) as nExercises
+  FROM
+      (SELECT exercisePlanID
+        FROM CustomPlan WHERE creator = '1000000000000003')
+      NATURAL JOIN ExerciseParameters
+      GROUP BY exercisePlanID)
+
+  USING(exercisePlanID);

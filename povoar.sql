@@ -155,6 +155,14 @@ INSERT INTO CustomPlan VALUES(9, null, 1, 1000000000000003);
 
 -- Exercise Parameters
 INSERT INTO ExerciseParameters VALUES(2, 3, 5, 2);
+INSERT INTO ExerciseParameters VALUES(0, 10, 6, 3);
+INSERT INTO ExerciseParameters VALUES(0, 11, 6, 3);
+INSERT INTO ExerciseParameters VALUES(0, 12, 6, 3);
+INSERT INTO ExerciseParameters VALUES(0, 13, 6, 3);
+INSERT INTO ExerciseParameters VALUES(0, 14, 6, 3);
+INSERT INTO ExerciseParameters VALUES(0, 15, 6, 3);
+INSERT INTO ExerciseParameters VALUES(0, 16, 6, 3);
+INSERT INTO ExerciseParameters VALUES(0, 17, 6, 3);
 INSERT INTO ExerciseParameters VALUES(0, 3, 6, 3);
 INSERT INTO ExerciseParameters VALUES(0, 1, 5, 1);
 INSERT INTO ExerciseParameters VALUES(0, 0, 4, 3);
