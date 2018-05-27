@@ -2,6 +2,13 @@
 .headers    on
 .nullvalue  NULL
 
-SELECT ExerciseID, difficulty FROM Exercise
-WHERE difficulty >= 2 AND difficulty <= 4
-ORDER BY difficulty ASC
+SELECT exerciseID, Exercise.name, count(*)*numRepetitions*numSets as ExercisePopularity, nickname as Creator
+FROM Execution
+NATURAL JOIN Challenge
+NATURAL JOIN ExercisePlan
+NATURAL JOIN ExerciseParameters
+JOIN Exercise USING(ExerciseID)
+NATURAL JOIN CustomExercise
+NATURAL JOIN User
+GROUP BY exerciseID
+ORDER BY ExercisePopularity DESC;
