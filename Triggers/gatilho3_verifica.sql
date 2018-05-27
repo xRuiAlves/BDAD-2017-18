@@ -6,7 +6,10 @@ select *
 from User
 where nickname = 'RuiVieiraLDA';
 
-INSERT INTO ParticipationDetails VALUES(1000000000000011, 7, 10, 2);
+UPDATE ParticipationDetails
+SET participationScore = 0
+WHERE userID = 1000000000000011 AND
+      challengeID = 9;
 
 select * 
 from User

@@ -1,8 +1,11 @@
 CREATE TRIGGER UserScore
-AFTER INSERT ON ParticipationDetails
+AFTER UPDATE ON ParticipationDetails
 FOR EACH ROW
 BEGIN
     UPDATE User
-    SET userScore = userScore + NEW.participationScore
+    SET userScore = 
+       (select sum(participationScore)
+        from User NATURAL JOIN ParticipationDetails
+        where ParticipationDetails.userID = NEW.userID)
     WHERE User.userID = NEW.userID;
 END;
